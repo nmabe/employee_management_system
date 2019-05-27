@@ -1,9 +1,12 @@
 require 'test_helper'
 
+class EmployeeTest < ActiveSupport::TestCase
+  require 'test_helper'
+
 class UserTest < ActiveSupport::TestCase
   
   def setup
-    @user = User.new(name: "Example User", dob: 25.years.ago, email: "example@mail.com", 
+    @user = Employee.new(name: "Example User", dob: 25.years.ago, email: "example@mail.com", 
       address: "5880 Jeleza Street Zone 5 Pimville 1809", gender: "Male", job_id: 56578)
   end
   
@@ -93,4 +96,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
   
+end
+
 end
