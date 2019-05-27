@@ -22,6 +22,7 @@ gem 'bootsnap', '>= 1.4.1', require: false
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3', '>= 1.3.6'
+  gem 'capybara', '>= 2.15'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -37,7 +38,6 @@ group :test do
   gem 'minitest-reporters', '~> 1.3', '>= 1.3.6'
   gem 'guard', '~> 2.15'
   gem 'guard-minitest', '~> 2.4', '>= 2.4.6'
-  gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
