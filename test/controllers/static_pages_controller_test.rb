@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   
   def setup
-    @base_title = "Employee Management system"
+    @base_title = "Employee Management System"
   end
 
   test "should get home" do
