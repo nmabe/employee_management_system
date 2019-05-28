@@ -1,5 +1,9 @@
 class EmployeesController < ApplicationController
 
+  def index
+    @employees = Employee.paginate(page: params[:page])
+  end
+
   def show
     @employee = Employee.find(params[:id])
   end
@@ -16,6 +20,26 @@ class EmployeesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+    @employee = Employee.find(params[:id])
+  end
+
+  def update
+    @employee = Employee.find(params[:id])
+    if @employee.update(employee_params)
+      flash[:success] = "Employee Details Updated Successful"
+      redirect_to @employee
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Employee.find(params[:id]).destroy
+    flash[:success] = "Employee Deleted"
+    redirect_to employees_url 
   end
 
   private

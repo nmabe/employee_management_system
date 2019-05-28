@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
   get '/new', to: 'employees#new'
-  post '/new', to: 'employees#create'
   resources :employees
 end

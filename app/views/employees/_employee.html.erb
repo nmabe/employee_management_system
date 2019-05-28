@@ -1,0 +1,6 @@
+<li>
+    <%= gravatar_for employee, size: 45 %>
+    <%= link_to employee.name, employee %>
+    |    <%= link_to "Delete", employee, method: :delete, data: { confirm: "Are You Sure?"} %>
+    |    <%= link_to "Edit", edit_employee_path(employee) %>
+</li>

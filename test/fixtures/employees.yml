@@ -1,17 +1,41 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+nkuli:
+  name: Nkuli Macgestar
+  dob: <%= 27.year.ago %>
+  email: michael@example.com
+  address: 3672 Hull Street Highland 3789
+  gender: Male
+  job_id: 78609
 
-one:
-  name: MyString
-  dob: 2019-05-27 18:35:52
-  email: MyString
-  address: MyText
-  gender: MyString
-  job_id: 1
+jach:
+  name: Jack Hummer
+  dob: <%= 46.year.ago %>
+  email: jack@example.com
+  address: 3672 Bell Street Celvin 3789
+  gender: Male
+  job_id: 78609
 
-two:
-  name: MyString
-  dob: 2019-05-27 18:35:52
-  email: MyString
-  address: MyText
-  gender: MyString
-  job_id: 1
+John:
+  name: jOHN dOE
+  dob: <%= 33.year.ago %>
+  email: john@example.com
+  address: 3672 Marks Street Badlands 4439
+  gender: Male
+  job_id: 78609
+
+kelly:
+  name: Kelly Amanda
+  dob: <%= 31.year.ago %>
+  email: kk@example.com
+  address: 3672 Douglas Street Denver 3278
+  gender: Female
+  job_id: 78609
+
+<% 30.times do | n |%>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@mail.com " %>
+  dob: <%= 27.year.ago %>
+  address: <%= "367#{n * 2} Hull Street Highland 3789" %>
+  gender: Male
+  job_id: 78000
+<% end %>
