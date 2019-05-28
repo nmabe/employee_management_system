@@ -7,9 +7,13 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <div class="center jumbotron">  
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}")%>
+        <% end %>
         <%= yield %>
       </div>
     </div>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
