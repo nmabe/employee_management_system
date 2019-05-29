@@ -3,7 +3,20 @@
 <h1>All Employees</h1>
 
 <%= will_paginate %>
-<ul class="employees">
-    <%= render @employees %>
-</ul>
+<table class="table table-stribed">
+  <thead>
+    <tr>
+      <th class="text-center" >id</th>
+      <th class="text-center" >Avatar</th>
+      <th class="text-center">Name</th>
+      <th class="text-center">Email</th>
+      <th class="text-center" >Gender</th>
+      <th class="text-center" >Date of Birth</th>
+      <th class="text-center" >Job Id</th>
+    </tr>
+  </thead>
+  <tbody>
+        <%= render @employees %>
+   </tbody>
+</table>
 <%= will_paginate %>

@@ -1,6 +1,11 @@
-<li>
-    <%= gravatar_for employee, size: 45 %>
-    <%= link_to employee.name, employee %>
-    |    <%= link_to "Delete", employee, method: :delete, data: { confirm: "Are You Sure?"} %>
-    |    <%= link_to "Edit", edit_employee_path(employee) %>
-</li>
+<tr class="clickable-row" data-href="<%= employee_path(employee) %>" >
+    <td><%= employee.id %></td>
+    <td><%= gravatar_for employee, size: 45 %></td>
+    <td><%= link_to employee.name, employee %></td>
+    <td><%= link_to employee.email, employee %></td>
+    <td><%= link_to employee.gender, employee %></td>
+    <td><%= link_to employee.dob, employee %></td>
+    <td><%= link_to employee.job_id, employee %></td>
+    <td><%= link_to "Delete", employee, method: :delete, data: { confirm: "Are You Sure?"} %></td>
+    <td><%= link_to "Edit", edit_employee_path(employee) %></td>
+</tr>

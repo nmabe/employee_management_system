@@ -1,11 +1,29 @@
 <% provide(:title, @employee.name)%>
-<div class="row">
-    <aside class="col-md-4">
-        <section class="employee-info">
-            <h1>
-                <%= gravatar_for @employee %>
-                <%= @employee.name %> 
-            </h1>
-        </section>
-    </aside>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <%= gravatar_for(@employee, size: 150) %>
+                <!--        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />  -->
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4><%= @employee.name %></h4>
+                        <small><cite title="<%= @employee.address %>"><%= @employee.address %><i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i><%= @employee.email %>
+                            <br />
+                            <i class="fa fa-transgender"></i> <%= @employee.gender %>                            
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i><%= @employee.dob %></p>
+
+                    </div>
+                </div>
+                <%= link_to "Edit", edit_employee_path(@employee) , class: "btn btn-large btn-primary"%>
+                <%= link_to "Delete", @employee, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-large btn-primary"%>
+
+        </div>
+    </div>
 </div>

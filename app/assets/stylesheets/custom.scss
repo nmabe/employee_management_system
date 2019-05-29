@@ -14,6 +14,9 @@ $gray-medium-light: #eaeaea;
 	box-sizing:	border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+
 /*  Universal */
 
 body{
@@ -70,11 +73,12 @@ p {
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	color: #ccc;
+	color: #c9c9c9;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
+	font-family: 'Pacifico', cursive;
 
 	&:hover {
 		color: #ccc;
@@ -134,7 +138,7 @@ aside {
 		}
 
 		h1 {
-			font-size: 1.4px;
+			font-size: 1.4em;
 			text-align: left;
 			letter-spacing: -1px;
 			margin-bottom: 3px;
@@ -203,4 +207,12 @@ input {
 		padding: 10px 0;
 		border-bottom: 1px solid $gray-lighter;
 	}
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+	display: block;
+	line-height: 1.428571429;
+	color: #999;
 }

@@ -18,6 +18,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'will_paginate', '~> 3.1'
+gem 'font-awesome-rails'
 gem 'bootsnap', '>= 1.4.1', require: false
 
 group :development, :test do
